@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
     
@@ -74,7 +75,7 @@ class Home extends React.Component {
                                         Click the link below to read or purchase original poetry by Gerald Henderson.
                                     </p>
                                     <p className="card-text"><small className="text-muted"></small></p>
-                                    <a href="https://todolist-bloom.herokuapp.com/" className="btn btn-secondary">Browse Poetry</a>
+                                    <Link to={"/poetry"} className="btn btn-secondary">Browse Poetry</Link>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +100,7 @@ class Home extends React.Component {
                                         Click the link below to listen to or purchase original music by Gerald Henderson.
                                     </p>
                                     <p className="card-text"><small className="text-muted"></small></p>
-                                    <a href="https://todolist-bloom.herokuapp.com/" className="btn btn-secondary">Browse Music</a>
+                                    <Link to={"/music"} className="btn btn-secondary">Browse Music</Link>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +124,7 @@ class Home extends React.Component {
                                         Click the link below to listen to or purchase short stories by Gerald Henderson.
                                     </p>
                                     <p className="card-text"><small className="text-muted"></small></p>
-                                    <a href="https://todolist-bloom.herokuapp.com/" className="btn btn-secondary">Browse Short Stories</a>
+                                    <Link to={"/shortstories"} className="btn btn-secondary">Browse Short Stories</Link>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +148,7 @@ class Home extends React.Component {
                                         Click the link below to learn about opportunities to help or seek help.
                                     </p>
                                     <p className="card-text"><small className="text-muted"></small></p>
-                                    <a href="https://todolist-bloom.herokuapp.com/" className="btn btn-secondary">Community Services</a>
+                                    <Link to={"/community"} className="btn btn-secondary">Community Services</Link>
                                 </div>
                             </div>
                         </div>
