@@ -13,3 +13,45 @@ Short Stories
 
 Newletter Plugin
 Login Functionality
+
+
+Updates on efforts, outreach, volunteer opportunities
+
+
+
+Navigation Bar/Drop Down Menu:
+Blog/Newletter
+Poetry
+Music
+Short Stories
+
+
+
+Things I need from Gerald:
+Website Title
+
+
+.font-primary, skills {
+    color: #9b3bcf;
+}
+
+.font-secondary {
+    color: #6fcf3b;
+}
+
+p, vocation {
+color: #cf3b6f;
+}
+
+h2, email, name {
+color: #6fcf3b;
+}
+
+icons a {
+color: #000
+}
+
+
+font black is white for some reason
+
+#bdeaee • #58668b • #5e5656
