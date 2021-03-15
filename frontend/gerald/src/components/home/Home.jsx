@@ -33,7 +33,10 @@ class Home extends React.Component {
                                     <a className="nav-link font-black" href="#contact">Contact</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link font-black" href="#signlog">Signup/Login</a>
+                                    <a className="nav-link font-black" href="/login">Login</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link font-black" href="/signup">Signup</a>
                                 </li>
                             </ul>
                         </div>
@@ -153,7 +156,9 @@ class Home extends React.Component {
 
                 {/* Contact section */}
                 <div id="contact">
-                    <div class="contact-form-container">
+                    <h2><span className="font-primary">C</span>ontact</h2>
+                    
+                    <div className="contact-form-container">
                         <form action="/action_page.php">
                             <label for="fname">First Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="Your name.." />

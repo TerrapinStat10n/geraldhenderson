@@ -238,3 +238,64 @@ input[type=text], textarea {
     background-color: #f2f2f2;
     padding: 20px;
   }
+#contact {
+    margin: 60px auto;
+    width: 80%;
+}
+#contact h2 {
+    text-align: center;
+}
+
+/******************************
+
+SIGN UP
+
+******************************/
+.header {
+    margin: 2em;
+}
+.go-back-button {
+    background-color: #D44D5C;
+    color: #e3b5a4;
+}
+
+.signup-form-header {
+    color: #e3b5a4;
+    text-align: center;
+}
+
+.form-field-a, .form-field-b, .form-field-c {
+    width: 70% !important;
+    height: 3.57rem;
+    padding: 0.357rem;
+    display: flex;
+    font-size: x-large;
+    margin-bottom: 0.72rem !important;
+    margin: auto;
+    background-color: #e3b5a4;
+    color: #773344;
+}
+
+.signup-button {
+    background-color: #D44D5C;
+    color: #e3b5a4;
+    padding: 0.72rem 1.43rem;
+    border-radius: 0.38rem;
+    width: 40%;
+    font-size: 2.29rem;
+    margin-top: 2.2rem;
+    margin-left: 32%;
+  }
+
+  .signup-error,
+  .login-error {
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+/******************************
+
+LOG IN
+
+******************************/
