@@ -336,3 +336,32 @@ POETRY PAGE
         width: 90%;
     }
 }
+
+/******************************
+
+MUSIC PAGE
+
+******************************/
+
+#music-page-container {
+    width: 50%;
+    margin: auto;
+    padding: 0.1em;
+}
+
+#music-page-container .card-title {
+    text-align: center;
+}
+
+#music-page-container h2 {
+    text-align: center;
+}
+
+#music-page-container .card-text {
+    text-align: center;
+}
+@media only screen and (max-width: 500px) {
+    #music-page-container {
+        width: 90%;
+    }
+}
