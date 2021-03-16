@@ -45,6 +45,16 @@ footer {
 .navbar-toggler {
     background-color: white;
 }
+
+.short-tab {
+    margin-left: 1em;
+}
+.tab {
+    margin-left: 4em;
+}
+.long-tab {
+    margin-left: 7em;
+}
 /******************************
 
 ABOUT
@@ -299,3 +309,30 @@ SIGN UP
 LOG IN
 
 ******************************/
+
+
+/******************************
+
+POETRY PAGE
+
+******************************/
+
+#poetry-page-container {
+    width: 50%;
+    margin: auto;
+    padding: 0.1em;
+}
+
+#poetry-page-container .card-title {
+    text-align: center;
+}
+
+#poetry-page-container h2 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    #poetry-page-container {
+        width: 90%;
+    }
+}
