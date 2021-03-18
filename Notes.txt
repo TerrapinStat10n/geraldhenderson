@@ -11,8 +11,7 @@ Poetry
 Short Stories
 
 
-Newletter Plugin
-Login Functionality
+
 
 
 Updates on efforts, outreach, volunteer opportunities
@@ -20,7 +19,7 @@ Updates on efforts, outreach, volunteer opportunities
 
 
 Navigation Bar/Drop Down Menu:
-Blog/Newletter
+
 Poetry
 Music
 Short Stories
@@ -52,6 +51,965 @@ color: #000
 }
 
 
-font black is white for some reason
+Blog/Newletter
+Newletter Plugin
+Login Functionality
 
-#bdeaee • #58668b • #5e5656
+
+
+
+
+
+
+
+Stack
+A stack is an Abstract Data Type (ADT), commonly used in most programming languages. It is named stack as it behaves like a real-world stack, for example – a deck of cards or a pile of plates, etc.
+
+1.png
+
+A real-world stack allows operations at one end only. For example, we can place or remove a card or plate from the top of the stack only. Likewise, Stack ADT allows all data operations at one end only. At any given time, we can only access the top element of a stack.
+
+This feature makes it LIFO data structure. LIFO stands for Last-in-first-out. Here, the element which is placed (inserted or added) last, is accessed first. In stack terminology, insertion operation is called PUSH operation and removal operation is called POP operation.
+
+Stack Representation
+2.png
+
+A stack can be implemented by means of Array, Structure, Pointer, and Linked List. Stack can either be a fixed size one or it may have a sense of dynamic resizing.
+
+Basic Operations
+Stack operations may involve initializing the stack, using it and then de-initializing it. Apart from these basic stuffs, a stack is used for the following two primary operations −
+
+push() − Pushing (storing) an element on the stack.
+
+pop() − Removing (accessing) an element from the stack.
+
+When data is PUSHed onto stack.
+
+To use a stack efficiently, we need to check the status of stack as well. For the same purpose, the following functionality is added to stacks −
+
+peek() − get the top data element of the stack, without removing it.
+
+isFull() − check if stack is full.
+
+isEmpty() − check if stack is empty.
+
+At all times, we maintain a pointer to the last PUSHed data on the stack. As this pointer always represents the top of the stack, hence named top. The top pointer provides top value of the stack without actually removing it.
+
+The process of putting a new data element onto stack is known as a Push Operation. Push operation involves a series of steps −
+
+Step 1 − Checks if the stack is full.
+
+Step 2 − If the stack is full, produces an error and exit.
+
+Step 3 − If the stack is not full, increments top to point next empty space.
+
+Step 4 − Adds data element to the stack location, where top is pointing.
+
+Step 5 − Returns success
+
+image.png
+
+In [ ]:
+s = []
+  
+s.append('eat')
+s.append('sleep')
+s.append('code')
+  
+print(s)
+['eat', 'sleep', 'code']
+  
+s.pop()
+#'code'
+s.pop()
+#'sleep'
+s.pop()
+#'eat'
+  
+#s.pop()
+#IndexError: "pop from empty list"
+Accessing the content while removing it from the stack, is known as a Pop Operation. In an array implementation of pop() operation, the data element is not actually removed, instead top is decremented to a lower position in the stack to point to the next value.
+
+A Pop operation may involve the following steps −
+
+Step 1 − Checks if the stack is empty.
+
+Step 2 − If the stack is empty, produces an error and exit.
+
+Step 3 − If the stack is not empty, accesses the data element at which top is pointing.
+
+Step 4 − Decreases the value of top by 1.
+
+Step 5 − Returns success.
+
+image.png
+
+In [27]:
+s = []
+
+# Insertion of elements 
+s.append('eat')
+s.append('sleep')
+s.append('code')
+
+if(len(s)==0):
+    print("nothing to pop!")
+    #IndexError: "pop from empty list"
+else:
+    print(s)
+   # ['eat', 'sleep', 'code']
+
+# Deletion of elememts 
+
+s.pop()
+#'code'
+s.pop()
+#'sleep'
+s.pop()
+#'eat'
+nothing to pop!
+Out[27]:
+'eat'
+Note : A pointer references a location in memory. Using pointers significantly improves performance for repetitive operations, like traversing iterable data structures.
+
+Queue
+Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.
+
+A real-world example of queue can be a single-lane one-way road, where the vehicle enters first, exits first. More real-world examples can be seen as queues at the ticket windows and bus-stops.
+
+image.png
+
+Queue Representation
+In queue, we access both ends for different reasons. The following diagram given below tries to explain queue representation as data structure −
+
+image.png
+
+As in stacks, a queue can also be implemented using Arrays, Linked-lists, Pointers and Structures.
+
+Basic Operations
+Queue operations may involve initializing or defining the queue, utilizing it, and then completely erasing it from the memory. Here we shall try to understand the basic operations associated with queues −
+
+enqueue() − add (store) data to the queue.
+
+dequeue() − remove (access) data from the queue.
+
+Few more functions are required to make the above-mentioned queue operation efficient. These are −
+
+peek() − Gets the element at the front of the queue without removing it.
+
+isfull() − Checks if the queue is full.
+
+isempty() − Checks if the queue is empty.
+
+Queues maintain two data pointers, front and rear. Therefore, its operations are comparatively difficult to implement than that of stacks.
+
+The following steps should be taken to enqueue (insert) data into a queue −
+
+Step 1 − Check if the queue is full.
+
+Step 2 − If the queue is full, produce overflow error and exit.
+
+Step 3 − If the queue is not full, increment rear pointer to point the next empty space.
+
+Step 4 − Add data element to the queue location, where the rear is pointing.
+
+Step 5 − return success.
+
+image.png
+
+Accessing data from the queue is a process of two tasks − access the data where front is pointing and remove the data after access. The following steps are taken to perform dequeue operation −
+
+Step 1 − Check if the queue is empty.
+
+Step 2 − If the queue is empty, produce underflow error and exit.
+
+Step 3 − If the queue is not empty, access the data where front is pointing.
+
+Step 4 − Increment front pointer to point to the next available data element.
+
+Step 5 − Return success.
+
+image.png
+
+In [29]:
+# Initializing a queue
+queue = []
+ 
+# Insertion of elements to the queue
+queue.append('a')
+queue.append('b')
+queue.append('c')
+ 
+print("Initial queue")
+print(queue)
+ 
+# Deletion of elements from the queue
+print("\nElements dequeued from queue")
+print(queue.pop(0))
+print(queue.pop(0))
+print(queue.pop(0))
+ 
+print("\nQueue after removing elements")
+print(queue)
+ 
+# Uncommenting print(queue.pop(0))
+# will raise and IndexError
+# as the queue is now empty
+Initial queue
+['a', 'b', 'c']
+
+Elements dequeued from queue
+a
+b
+c
+
+Queue after removing elements
+[]
+Interview Questions on Stacks
+1) What is a Stack?
+
+Stack is an ordered list in which, insertion and deletion can be performed only at one end that is called the top. It is a recursive data structure having pointer to its top element. The stack is sometimes called as Last-In-First-Out (LIFO) list i.e. the element which is inserted first in the stack will be deleted last from the stack.
+
+2) List the area of applications where stack data structure can be used?
+
+Expression evaluation
+Backtracking
+Memory Management
+Function calling and return
+3) What is the difference between PUSH and POP?
+
+PUSH and POP operations specify how data is stored and retrieved in a stack.
+
+PUSH: PUSH specifies that data is being "inserted" into the stack.
+
+POP: POP specifies data retrieval. It means that data is being deleted from the stack.
+
+4) Write the stack overflow condition.
+
+Overflow occurs when top = Maxsize -1
+
+5) What are the operations that can be performed on a stack?
+Push Operations
+Pop Operations
+Peek Operations
+Interview Questions on Queues
+1) Define the queue data structure.
+A queue can be defined as an ordered list which enables insert operations to be performed at one end called REAR and delete operations to be performed at another end called FRONT.
+
+2) List some applications of queue data structure.
+Queues are widely used as waiting lists for a single shared resource like a printer, disk, CPU.
+
+Queues are used in the asynchronous transfer of data (where data is not being transferred at the same rate between two processes) for eg. pipes, file IO, sockets.
+
+Queues are used as buffers in most of the applications like MP3 media player, CD player, etc.
+
+Queues are used to maintain the playlist in media players to add and remove the songs from the play-list.
+
+Queues are used in operating systems for handling interrupts.
+
+3) What are the drawbacks of array implementation of Queue?
+Memory Wastage: The space of the array, which is used to store queue elements, can never be reused to store the elements of that queue because the elements can only be inserted at front end and the value of front might be so high so that, all the space before that, can never be filled.
+
+Array Size: There might be situations in which, we may need to extend the queue to insert more elements if we use an array to implement queue, It will almost be impossible to extend the array size, therefore deciding the correct array size is always a problem in array implementation of queue.
+
+4) What is a dequeue ?
+Dequeue (also known as double-ended queue) can be defined as an ordered set of elements in which the insertion and deletion can be performed at both the ends, i.e. front and rear.
+
+5) What is the minimum number of queues that can be used to implement a priority queue?
+Two queues are needed. One queue is used to store the data elements, and another is used for storing priorities.
+
+Array
+An array is a collection of items stored at contiguous memory locations.It is a container which can hold a fix number of items and these items should be of the same type. Most of the data structures make use of arrays to implement their algorithms.
+
+Element− Each item stored in an array is called an element.
+Index − Each location of an element in an array has a numerical index, which is used to identify the element.
+Array Representation
+image.png
+
+Following are the important points to be considered -
+
+1) Index starts with 0.
+
+2) If an array length is 10 then it means array can store 10 elements.
+
+3) Each element can be accessed via its index.
+
+Array Creation
+Array is created in Python by importing array module to the python program. Then the array is declared as shown below.
+
+from array import *
+
+arrayName = array(typecode, [Initializers])</b>
+
+Typecode are the codes that are used to define the type of value the array will hold. Some common typecodes used are:
+
+image.png
+
+Basic Operations
+Following are the basic operations supported by an array.
+
+Traverse − print all the array elements one by one.
+
+In [30]:
+from array import *
+list1 = [10,20,30,40,50]
+array1 = array('i',list1)
+
+for x in array1:
+    print(x)
+10
+20
+30
+40
+50
+Insertion − Adds an element at the given index.
+
+In [32]:
+from array import *
+list2 = [10,20,30,40,50]
+array2 = array('i', list2)
+
+array2.insert(1,60)
+
+array2
+Out[32]:
+array('i', [10, 60, 20, 30, 40, 50])
+Deletion − Deletes an element at the given index.
+
+In [33]:
+from array import *
+
+list3 = [10,20,30,40,50]
+array3 = array('i', list3)
+
+array3.remove(40)
+
+array3
+Out[33]:
+array('i', [10, 20, 30, 50])
+Search − Searches an element using the given index.
+
+In [39]:
+from array import *
+
+list4 = [10,20,30,40,50]
+array4 = array('i', list4)
+
+print (array4.index(40))
+3
+Update − Updates an element at the given index.
+
+In [41]:
+from array import *
+
+list5 = [10,20,30,40,50]
+array5 = array('i', list5)
+
+# updating the element '30' to '80'
+array5[2] = 80
+array5
+Out[41]:
+array('i', [10, 20, 80, 40, 50])
+Advantages of using Arrays
+1) Arrays allow random access to elements. This makes accessing elements by position faster.
+2) Arrays represent multiple data items of the same type using a single name.
+
+Disadvantages of using Arrays
+1) The number of elements to be stored in an array should be known in advance.
+2) An array is a static structure (which means the array is of fixed size). Once declared the size of the array cannot be modified.
+3) Allocating more memory than the requirement leads to wastage of memory space and less allocation of memory also leads to a problem.
+
+Linked List
+A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers.
+
+image.png
+
+In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+
+In [42]:
+# Node class 
+class Node: 
+  
+    # Function to initialise the node object 
+    def __init__(self, data): 
+        self.data = data  # Assign data 
+        self.next = None  # Initialize next as null 
+  
+  
+# Linked List class contains a Node object 
+class LinkedList: 
+  
+    # Function to initialize head 
+    def __init__(self): 
+        self.head = None
+  
+  
+# Code execution starts here 
+if __name__=='__main__': 
+  
+    # Start with the empty list 
+    llist = LinkedList() 
+  
+    llist.head = Node(1) 
+    second = Node(2) 
+    third = Node(3) 
+  
+    ''' 
+    Three nodes have been created. 
+    We have references to these three blocks as head, 
+    second and third 
+  
+    llist.head        second              third 
+         |                |                  | 
+         |                |                  | 
+    +----+------+     +----+------+     +----+------+ 
+    | 1  | None |     | 2  | None |     |  3 | None | 
+    +----+------+     +----+------+     +----+------+ 
+    '''
+  
+    llist.head.next = second; # Link first node with second  
+  
+    ''' 
+    Now next of first Node refers to second.  So they 
+    both are linked. 
+  
+    llist.head        second              third 
+         |                |                  | 
+         |                |                  | 
+    +----+------+     +----+------+     +----+------+ 
+    | 1  |  o-------->| 2  | null |     |  3 | null | 
+    +----+------+     +----+------+     +----+------+  
+    '''
+  
+    second.next = third; # Link second node with the third node 
+  
+    ''' 
+    Now next of second Node refers to third.  So all three 
+    nodes are linked. 
+  
+    llist.head        second              third 
+         |                |                  | 
+         |                |                  | 
+    +----+------+     +----+------+     +----+------+ 
+    | 1  |  o-------->| 2  |  o-------->|  3 | null | 
+    +----+------+     +----+------+     +----+------+  
+    '''
+Linked List - Traversal
+We have created a simple linked list with three nodes. Let us traverse the created list and print the data of each node. For traversal, let us write a general-purpose function printList() that prints any given list.
+
+In [43]:
+# Node class 
+class Node: 
+  
+    # Function to initialise the node object 
+    def __init__(self, data): 
+        self.data = data  # Assign data 
+        self.next = None  # Initialize next as null 
+  
+  
+# Linked List class contains a Node object 
+class LinkedList: 
+  
+    # Function to initialize head 
+    def __init__(self): 
+        self.head = None
+  
+    # This function prints contents of linked list 
+    # starting from head 
+    def printList(self): 
+        temp = self.head 
+        while (temp): 
+            print (temp.data) 
+            temp = temp.next
+  
+  
+# Code execution starts here 
+if __name__=='__main__': 
+  
+    # Start with the empty list 
+    llist = LinkedList() 
+  
+    llist.head = Node(1) 
+    second = Node(2) 
+    third = Node(3) 
+  
+    llist.head.next = second; # Link first node with second 
+    second.next = third; # Link second node with the third node 
+  
+    llist.printList()
+1
+2
+3
+Linked List - Inserting a node
+A node can be added in three ways :
+
+1)
+
+The new node is always added before the head of the given Linked List. And newly added node becomes the new head of the Linked List.
+For example - If the given Linked List is 10->15->20->25 and we add an item 5 at the front, then the Linked List becomes 5->10->15->20->25.
+
+image.png
+
+In [11]:
+# This function is in LinkedList class 
+# Function to insert a new node at the beginning 
+def push(self, new_data): 
+  
+    # 1 & 2: Allocate the Node & 
+    #        Put in the data 
+    new_node = Node(new_data) 
+          
+    # 3. Make next of new Node as head 
+    new_node.next = self.head 
+          
+    # 4. Move the head to point to new Node  
+    self.head = new_node
+2)
+
+We are given pointer to a node, and the new node is inserted after the given node.
+
+image.png
+
+In [44]:
+# This function is in LinkedList class.  
+# Inserts a new node after the given prev_node. 
+# This method is defined inside LinkedList class shown above . 
+def insertAfter(self, prev_node, new_data):  
+  
+    # 1. check if the given prev_node exists  
+    if prev_node is None:  
+        print("The given previous node must in LinkedList.")
+        return
+  
+    # 2. Create new node &  
+    # 3. Put in the data  
+    new_node = Node(new_data)  
+  
+    # 4. Make next of new Node as next of prev_node  
+    new_node.next = prev_node.next
+  
+    # 5. make next of prev_node as new_node  
+    prev_node.next = new_node
+3)
+
+The new node is always added after the last node of the given Linked List.
+For example If the given Linked List is 5->10->15->20->25 and we add an item 30 at the end, then the Linked List becomes 5->10->15->20->25->30.
+Since a Linked List is typically represented by the head of it, we have to traverse the list till end and then change the next of last node to new node.
+
+image.png
+
+In [14]:
+# This function is defined in Linked List class 
+# Appends a new node at the end.  This method is 
+#  defined inside LinkedList class shown above */ 
+def append(self, new_data): 
+ 
+   # 1. Create a new node 
+   # 2. Put in the data 
+   # 3. Set next as None 
+   new_node = Node(new_data) 
+ 
+   # 4. If the Linked List is empty, then make the 
+   #    new node as head 
+   if self.head is None: 
+        self.head = new_node 
+        return
+ 
+   # 5. Else traverse till the last node 
+   last = self.head 
+   while (last.next): 
+       last = last.next
+ 
+   # 6. Change the next of last node 
+   last.next =  new_node
+Linked List - Deleting a node
+To delete a node from the linked list, we need to do the following steps.
+1) Find the previous node of the node to be deleted.
+2) Change the next of the previous node.
+3) Free memory for the node to be deleted.
+
+image.png
+
+In [15]:
+# Node class 
+class Node: 
+ 
+    # Constructor to initialize the node object 
+    def __init__(self, data): 
+        self.data = data 
+        self.next = None
+ 
+class LinkedList: 
+ 
+    # Function to initialize head 
+    def __init__(self): 
+        self.head = None
+ 
+    # Function to insert a new node at the beginning 
+    def push(self, new_data): 
+        new_node = Node(new_data) 
+        new_node.next = self.head 
+        self.head = new_node 
+ 
+    # Given a reference to the head of a list and a key, 
+    # delete the first occurence of key in linked list 
+    def deleteNode(self, key): 
+         
+        # Store head node 
+        temp = self.head 
+ 
+        # If head node itself holds the key to be deleted 
+        if (temp is not None): 
+            if (temp.data == key): 
+                self.head = temp.next
+                temp = None
+                return
+ 
+        # Search for the key to be deleted, keep track of the 
+        # previous node as we need to change 'prev.next' 
+        while(temp is not None): 
+            if temp.data == key: 
+                break
+            prev = temp 
+            temp = temp.next
+ 
+        # if key was not present in linked list 
+        if(temp == None): 
+            return
+ 
+        # Unlink the node from linked list 
+        prev.next = temp.next
+ 
+        temp = None
+ 
+ 
+    # Utility function to print the linked LinkedList 
+    def printList(self): 
+        temp = self.head 
+        while(temp): 
+            print (" %d" %(temp.data)), 
+            temp = temp.next
+ 
+ 
+# Driver program 
+llist = LinkedList() 
+llist.push(7) 
+llist.push(1) 
+llist.push(3) 
+llist.push(2) 
+ 
+print ("Created Linked List: ")
+llist.printList() 
+llist.deleteNode(1) 
+print ("\nLinked List after Deletion of 1:")
+llist.printList()
+Created Linked List: 
+ 2
+ 3
+ 1
+ 7
+
+Linked List after Deletion of 1:
+ 2
+ 3
+ 7
+Delete a Linked List node at a given position
+Given a singly linked list and a position, delete a linked list node at the given position.
+
+
+Input: position = 1, Linked List = 8->2->3->1->7   Output: Linked List = 8->3->1->7
+
+Input: position = 0, Linked List = 8->2->3->1->7   Output: Linked List = 2->3->1->7
+
+In [18]:
+# Node class  
+class Node: 
+  
+    # Constructor to initialize the node object 
+    def __init__(self, data): 
+        self.data = data 
+        self.next = None
+  
+class LinkedList: 
+  
+    # Constructor to initialize head 
+    def __init__(self): 
+        self.head = None
+  
+    # Function to insert a new node at the beginning 
+    def push(self, new_data): 
+        new_node = Node(new_data) 
+        new_node.next = self.head 
+        self.head = new_node 
+  
+    # Given a reference to the head of a list  
+    # and a position, delete the node at a given position 
+    def deleteNode(self, position): 
+  
+        # If linked list is empty 
+        if self.head == None: 
+            return 
+  
+        # Store head node 
+        temp = self.head 
+  
+        # If head needs to be removed 
+        if position == 0: 
+            self.head = temp.next
+            temp = None
+            return 
+  
+        # Find previous node of the node to be deleted 
+        for i in range(position -1 ): 
+            temp = temp.next
+            if temp is None: 
+                break
+  
+        # If position is more than number of nodes 
+        if temp is None: 
+            return 
+        if temp.next is None: 
+            return 
+  
+        # Node temp.next is the node to be deleted 
+        # store pointer to the next of node to be deleted 
+        next = temp.next.next
+  
+        # Unlink the node from linked list 
+        temp.next = None
+  
+        temp.next = next 
+  
+  
+    # Utility function to print the linked LinkedList 
+    def printList(self): 
+        temp = self.head 
+        while(temp): 
+            print ( " %d " %(temp.data)), 
+            temp = temp.next
+  
+  
+# Driver program to test above function 
+llist = LinkedList() 
+llist.push(7) 
+llist.push(1) 
+llist.push(3) 
+llist.push(2) 
+llist.push(8) 
+  
+print ("Created Linked List: ")
+llist.printList() 
+llist.deleteNode(4) 
+print ("\nLinked List after Deletion at position 4: ")
+llist.printList()
+Created Linked List: 
+ 8 
+ 2 
+ 3 
+ 1 
+ 7 
+
+Linked List after Deletion at position 4: 
+ 8 
+ 2 
+ 3 
+ 1 
+Doubly Linked List
+A Doubly Linked List (DLL) contains an extra pointer, typically called previous pointer, together with next pointer and data which are there in singly linked list.
+
+image.png
+
+In [20]:
+# Node of a doubly linked list 
+class Node:
+    def __init__(self, next=None, prev=None, data=None):
+        self.next = next # reference to next node in DLL
+        self.prev = prev # reference to previous node in DLL
+        self.data = data
+Advantages over singly linked list
+1) A DLL can be traversed in both forward and backward direction.
+2) The delete operation in DLL is more efficient if pointer to the node to be deleted is given.
+3) We can quickly insert a new node before a given node. In singly linked list, to delete a node, pointer to the previous node is needed. To get this previous node, sometimes the list is traversed. In DLL, we can get the previous node using previous pointer.
+
+Insertion In Doubly Linked List
+A node can be added in three ways
+1) At the front of the DLL
+2) After a given node.
+3) At the end of the DLL
+
+1) Add a node at the front:
+The new node is always added before the head of the given Linked List. And newly added node becomes the new head of DLL. For example if the given Linked List is 10152025 and we add an item 5 at the front, then the Linked List becomes 510152025
+
+image.png
+
+In [21]:
+# Adding a node at the front of the list
+def push(self, new_data):
+ 
+    # 1 & 2: Allocate the Node & Put in the data
+    new_node = Node(data = new_data)
+ 
+    # 3. Make next of new node as head and previous as NULL
+    new_node.next = self.head
+    new_node.prev = None
+ 
+    # 4. change prev of head node to new node 
+    if self.head is not None:
+        self.head.prev = new_node
+ 
+    # 5. move the head to point to the new node
+    self.head = new_node
+2) Add a node after a given node.
+We are given pointer to a node as prev_node, and the new node is inserted after the given node.
+
+image.png
+
+In [22]:
+# Given a node as prev_node, insert
+# a new node after the given node
+ 
+def insertAfter(self, prev_node, new_data):
+ 
+        # 1. check if the given prev_node is NULL
+        if prev_node is None:
+            print("This node doesn't exist in DLL")
+            return
+ 
+        #2. allocate node  & 3. put in the data
+        new_node = Node(data = new_data)
+ 
+        # 4. Make next of new node as next of prev_node
+        new_node.next = prev_node.next
+ 
+        # 5. Make the next of prev_node as new_node 
+        prev_node.next = new_node
+ 
+        # 6. Make prev_node as previous of new_node
+        new_node.prev = prev_node
+ 
+        # 7. Change previous of new_node's next node */
+        if new_node.next is not None:
+            new_node.next.prev = new_node
+3) Add a node at the end:
+The new node is always added after the last node of the given Linked List. For example if the given DLL is 510152025 and we add an item 30 at the end, then the DLL becomes 51015202530. Since a Linked List is typically represented by the head of it, we have to traverse the list till end and then change the next of last node to new node.
+
+image.png
+
+In [23]:
+# Add a node at the end of the DLL
+def append(self, new_data):
+ 
+        # 1. allocate node 2. put in the data
+        new_node = Node(data = new_data)
+        last = self.head
+ 
+        # 3. This new node is going to be the 
+        # last node, so make next of it as NULL
+        new_node.next = None
+ 
+        # 4. If the Linked List is empty, then
+        #  make the new node as head
+        if self.head is None:
+            new_node.prev = None
+            self.head = new_node
+            return
+ 
+        # 5. Else traverse till the last node 
+        while (last.next is not None):
+            last = last.next
+ 
+        # 6. Change the next of last node 
+        last.next = new_node
+        # 7. Make last node as previous of new node */
+        new_node.prev = last
+Circular Linked List
+Circular linked list is a linked list where all nodes are connected to form a circle. There is no NULL at the end. A circular linked list can be a singly circular linked list or doubly circular linked list.
+
+image.png
+
+Advantages of Circular Linked Lists:
+1) Any node can be a starting point. We can traverse the whole list by starting from any point. We just need to stop when the first visited node is visited again.
+
+
+2) Useful for implementation of queue. Unlike this implementation, we don’t need to maintain two pointers for front and rear if we use circular linked list. We can maintain a pointer to the last inserted node and front can always be obtained as next of last.
+
+
+3) Circular lists are useful in applications to repeatedly go around the list. For example, when multiple applications are running on a PC, it is common for the operating system to put the running applications on a list and then to cycle through them, giving each of them a slice of time to execute, and then making them wait while the CPU is given to another application. It is convenient for the operating system to use a circular list so that when it reaches the end of the list it can cycle around to the front of the list.
+
+Interview Questions on Arrays
+1) What is an array?
+Arrays are defined as the collection of similar types of data items stored at contiguous memory locations. It is the simplest data structure in which each data element can be randomly accessed by using its index number.
+
+2) How to reference all the elements in a one-dimension array?
+It can be done by using an indexed loop such that the counter runs from 0 to the array size minus one. In this manner, you can reference all the elements in sequence by using the loop counter as the array subscript.
+
+3) What is a multidimensional array?
+The multidimensional array can be defined as the array of arrays in which, the data is stored in tabular form consists of rows and columns. 2D arrays are created to implement a relational database look alike data structure. It provides ease of holding the bulk of data at once which can be passed to any number of functions wherever required.
+
+4) How are the elements of a 2D array are stored in the memory?
+There are two techniques by using which, the elements of a 2D array can be stored in the memory.
+
+
+Row-Major Order: In row-major ordering, all the rows of the 2D array are stored into the memory contiguously. First, the 1st row of the array is stored into the memory completely, then the 2nd row of the array is stored into the memory completely and so on till the last row.
+
+Column-Major Order: In column-major ordering, all the columns of the 2D array are stored into the memory contiguously. first, the 1st column of the array is stored into the memory completely, then the 2nd row of the array is stored into the memory completely and so on till the last column of the array.
+Interview Questions on Linked List
+1) Define Linked List Data structure.
+Linked List is the collection of randomly stored data objects called nodes. In Linked List, each node is linked to its adjacent node through a pointer. A node contains two fields, i.e. Data Field and Link Field.
+
+image.png
+
+2) Are linked lists considered linear or non-linear data structures?
+A linked list is considered both linear and non-linear data structure depending upon the situation.
+
+
+On the basis of data storage, it is considered as a non-linear data structure.
+On the basis of the access strategy, it is considered as a linear data-structure.
+3) What are the advantages of Linked List over an array?
+The size of a linked list can be incremented at runtime which is impossible in the case of the array.
+
+The Linked List is not required to be contiguously present in the main memory, if the contiguous space is not available, the nodes can be stored anywhere in the memory connected through the links.
+
+The Linked List is dynamically stored in the main memory and grows as per the program demand while the array is statically stored in the main memory, size of which must be declared at compile time.
+
+The number of elements in the linked list are limited to the available memory space while the number of elements in the array is limited to the size of an array.
+4) What is doubly linked list?
+The doubly linked list is a complex type of linked list in which a node contains a pointer to the previous as well as the next node in the sequence. In a doubly linked list, a node consists of three parts:
+
+
+node data
+pointer to the next node in sequence (next pointer)
+pointer to the previous node (previous pointer).
+5) What is the difference between a singly linked list and circular linked list?
+In a singly linked list, the last node points to Null.
+However, in a circular linked list, the last node point to the first node of the the list, forming the circular structure.
+
+In [ ]:
+
+
+
+
+
+
+
+Thank You!
+Casey D Bloom, your online application has been sent to the following local department of social services for processing on 03/17/2021 at 14:12:58
+Address:
+Erie County DSS
+158 Pearl Street
+Buffalo, NY 14202
+(716) 858-8000
+Someone from Social Services will be contacting you to schedule this interview.
+By law, you will get an answer about your benefits within 30 days if you applied for SNAP or Family Assistance or 45 days if you applied for Safety Net Assistance. If you have an emergency situation, you should contact the department of social services immediately.
+
+For information about other programs and services, go to the Helping Hands Brochure.
+Keep Track of Your Application
+Your myBenefits number for this application is MB00059001305.
+Your official Filing Date for benefits is 03/17/2021.
+It is a good idea to write this number down or print this page for your records. If you have questions about your application, having this number will help you get answers faster.
+Keep in mind that you can use your account to check the status of your application and your benefits on the myBenefits website.
+Print Your Application
+If you would like to print or save a copy of your application for your files, please click the Print My Application button. If you decide to print or save, please keep in mind that your application has your private, personal information in it.
+ Document Requirements Form
+Keep in mind that you will need to have a program called Adobe Acrobat Reader to see and print this information.
+If you do not have this program on your computer, you may install it for free by clicking the image:
