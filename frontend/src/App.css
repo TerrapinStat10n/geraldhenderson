@@ -1,0 +1,390 @@
+/******************************
+
+COMMON
+
+******************************/
+
+body {
+    font-family: "monospace", sans-serif;
+    background-color: #0b0014;
+}
+
+.font-primary {
+    color: #D44D5C;
+}
+
+.font-secondary {
+    color: #e3b5a4;
+}
+
+.title-icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+    color: #773344;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 20px;
+    color:  #e3b5a4;
+}
+
+a.font-black {
+    color: #F5e9e2 !important;
+}
+
+footer {
+    text-align: center;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.short-tab {
+    margin-left: 1em;
+}
+.tab {
+    margin-left: 4em;
+}
+.long-tab {
+    margin-left: 7em;
+}
+/******************************
+
+ABOUT
+
+******************************/
+
+#about {
+    margin: 60px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+#about img {
+    border-radius: 50%;
+    width: 240px;
+    margin-bottom: 10px;
+}
+
+#about .name {
+    font-size: 19px;
+    color:  #e3b5a4;
+}
+
+#about .vocation {
+    font-size: 17px;
+    color: #773344;
+    margin-bottom: 10px;
+}
+
+#about .skills {
+    font-size: 15px;
+    color: #D44D5C;
+    margin-bottom: 10px;
+}
+
+#about .email {
+    font-size: 14px;
+    margin-top: 14px;
+    color:  #e3b5a4;
+}
+
+#about .icons {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+#about .icons a {
+    color: #000;
+}
+
+/******************************
+
+POETRY
+
+******************************/
+
+#poetry {
+    margin: 60px auto;
+    width: 80%;
+}
+
+#poetry h2 {
+    text-align: center;
+}
+
+#poetry .card img {
+    width: 100%;
+}
+
+#poetry .card-title {
+    font-weight: bold;
+}
+
+#poetry .row {
+    margin-bottom: 20px;
+}
+
+/******************************
+
+MUSIC
+
+******************************/
+
+#music {
+    margin: 60px auto;
+    width: 80%;
+}
+
+#music h2 {
+    text-align: center;
+}
+
+#music .card img {
+    width: 100%;
+}
+
+#music .card-title {
+    font-weight: bold;
+}
+
+#music .row {
+    margin-bottom: 20px;
+}
+
+/******************************
+
+SHORT STORIES
+
+******************************/
+
+#short-stories {
+    margin: 60px auto;
+    width: 80%;
+}
+
+#short-stories h2 {
+    text-align: center;
+}
+
+#short-stories .card img {
+    width: 100%;
+}
+
+#short-stories .card-title {
+    font-weight: bold;
+}
+
+#short-stories .row {
+    margin-bottom: 20px;
+}
+
+#short-stories-page {
+    width: 50%;
+    margin: auto;
+    padding: 0.1em;
+}
+
+#short-stories-page .card-title {
+    text-align: center;
+}
+
+#short-stories-page h2 {
+    text-align: center;
+}
+
+#short-stories-page .card-text {
+    text-align: center;
+}
+@media only screen and (max-width: 500px) {
+    #short-stories-page {
+        width: 90%;
+    }
+}
+
+/******************************
+
+COMMUNITY
+
+******************************/
+
+#community {
+    margin: 60px auto;
+    width: 80%;
+}
+
+#community h2 {
+    text-align: center;
+}
+
+#community .card img {
+    width: 100%;
+}
+
+#community .card-title {
+    font-weight: bold;
+}
+
+#community .row {
+    margin-bottom: 20px;
+}
+
+/******************************
+
+CONTACT FORM
+
+******************************/
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .contact-form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+#contact {
+    margin: 60px auto;
+    width: 80%;
+}
+#contact h2 {
+    text-align: center;
+}
+
+/******************************
+
+SIGN UP
+
+******************************/
+.header {
+    margin: 2em;
+}
+.go-back-button {
+    background-color: #D44D5C;
+    color: #e3b5a4;
+}
+
+.signup-form-header {
+    color: #e3b5a4;
+    text-align: center;
+}
+
+.form-field-a, .form-field-b, .form-field-c {
+    width: 70% !important;
+    height: 3.57rem;
+    padding: 0.357rem;
+    display: flex;
+    font-size: x-large;
+    margin-bottom: 0.72rem !important;
+    margin: auto;
+    background-color: #e3b5a4;
+    color: #773344;
+}
+
+.signup-button {
+    background-color: #D44D5C;
+    color: #e3b5a4;
+    padding: 0.72rem 1.43rem;
+    border-radius: 0.38rem;
+    width: 40%;
+    font-size: 2.29rem;
+    margin-top: 2.2rem;
+    margin-left: 32%;
+  }
+
+  .signup-error,
+  .login-error {
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+/******************************
+
+LOG IN
+
+******************************/
+
+
+/******************************
+
+POETRY PAGE
+
+******************************/
+
+#poetry-page-container {
+    width: 50%;
+    margin: auto;
+    padding: 0.1em;
+}
+
+#poetry-page-container .card-title {
+    text-align: center;
+}
+
+#poetry-page-container h2 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    #poetry-page-container {
+        width: 90%;
+    }
+}
+
+/******************************
+
+MUSIC PAGE
+
+******************************/
+
+#music-page-container {
+    width: 50%;
+    margin: auto;
+    padding: 0.1em;
+}
+
+#music-page-container .card-title {
+    text-align: center;
+}
+
+#music-page-container h2 {
+    text-align: center;
+}
+
+#music-page-container .card-text {
+    text-align: center;
+}
+@media only screen and (max-width: 500px) {
+    #music-page-container {
+        width: 90%;
+    }
+}
